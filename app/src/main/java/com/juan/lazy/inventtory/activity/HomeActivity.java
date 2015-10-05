@@ -10,14 +10,8 @@ import android.view.MenuItem;
 import android.widget.GridView;
 
 import com.juan.lazy.inventtory.R;
-import com.juan.lazy.inventtory.adapter.GridViewAdapter;
-import com.juan.lazy.inventtory.controller.Property;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-    private GridViewAdapter adapter;
     private GridView gridView;
     private ActionBar actionBar;
 
@@ -30,10 +24,6 @@ public class HomeActivity extends AppCompatActivity {
             actionBar.setTitle("Home");
         }
         gridView = (GridView) findViewById(R.id.gvItems);
-        List<Property> property = new ArrayList<>();
-        property.add(new Property());
-        adapter = new GridViewAdapter(this, property);
-        gridView.setAdapter(adapter);
     }
 
     @Override
